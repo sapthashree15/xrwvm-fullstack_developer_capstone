@@ -128,7 +128,8 @@ def add_review(request):
             print("add_review request processed!")
     else:
         return JsonResponse({"status": 403, "message": "Unauthorized"})
-        
+
+
 def get_cars(request):
     count = CarMake.objects.filter().count()
     if count == 0:
